@@ -28,7 +28,9 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        print_r($_POST);
+        $task = request()->all();
+        Task::create($task);
+        return redirect('/');
     }
 
     /**
