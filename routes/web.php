@@ -5,7 +5,4 @@ use App\Http\Controllers\TaskController;
 
 
 Route::get('/', [TaskController::class, 'index']);
-
-Route::post('/', function () {
-    print_r($_POST);
-});
+Route::post('/', [TaskController::class, 'store']);
