@@ -8,9 +8,10 @@
 </head>
 <body>
     
-    <form action="" method="post">
+    <form action="{{ url('/') }}" method="post">
+        @csrf
         <input type="text" name="task" id="task">
-        <input type="button" value="Enviar">
+        <input type="submit" value="Add task">
     </form>
 
 </body>
