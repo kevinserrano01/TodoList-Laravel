@@ -14,5 +14,23 @@
         <input type="submit" value="Add task">
     </form>
 
+    <br>
+
+    <table border="1">
+        <tr>
+            <td> Nombre de la tarea </td>
+            <td> Accion </td>
+        </tr>
+
+        @foreach ($tasks as $task)
+            <tr>
+            <td> {{ $task->task }} </td>
+            <td> X </td>
+        </tr>
+        @endforeach
+        
+
+    </table>
+
 </body>
 </html>
